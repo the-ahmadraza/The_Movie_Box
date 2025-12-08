@@ -230,56 +230,73 @@ nav.scrolled {
 }
 
 /* Footer Styles */
+/* Footer Styles */
 footer {
     background: #141414;
     padding: 3rem 0;
     color: #757575;
     margin-top: auto;
-    border-top: none;
+    border-top: 1px solid #333; /* Adds a subtle separation line like Netflix */
 }
 
 .footer-content {
-    max-width: 1000px;
+    max-width: 1200px; /* Aligns with the rest of your site */
     margin: 0 auto;
     padding: 0 2rem;
-    text-align: center;
 }
 
 .footer-main {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Pushes Logo to Left, Links to Right */
+    align-items: center; /* Ensures they are centered vertically */
+    flex-wrap: wrap; /* Prevents breaking on smaller screens */
+    gap: 2rem;
     margin-bottom: 2rem;
+}
+
+/* Fix for the Logo/Brand alignment */
+.footer-brand {
+    display: flex;
+    align-items: center; /* Aligns the icon and text side-by-side */
+    gap: 10px; /* Space between the clapperboard and text */
+}
+
+.footer-brand span {
+    font-size: 1.8rem; /* Adjust icon size */
 }
 
 .footer-brand h4 {
     color: #E50914;
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin: 0; /* Removes weird spacing causing the misalignment */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+/* Fix for the Links alignment */
 .footer-links {
     display: flex;
-    justify-content: center;
     gap: 2rem;
+    margin: 0;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
 }
 
 .footer-links a {
     color: #757575;
     text-decoration: none;
     font-size: 0.9rem;
+    transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
+    color: #ffffff;
     text-decoration: underline;
-    color: #fff;
 }
 
 .tmdb-attribution {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Keeps the attribution centered at bottom */
     gap: 0.5rem;
     margin: 1rem 0;
     font-size: 0.8rem;
@@ -294,6 +311,20 @@ footer {
     border-top: none;
     padding-top: 1rem;
     font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Responsive Fix: Stacks them vertically on mobile */
+@media (max-width: 768px) {
+    .footer-main {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
 }
 
 /* Feature Cards */
