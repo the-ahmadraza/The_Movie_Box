@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Movie Box - Your Ultimate Movie Destination</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">🎬 The Movie Box</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')" class="active">Home</a></li>
+                <li><a href="#" onclick="showPage('wheel')">Movie Wheel</a></li>
+                <li><a href="#" onclick="showPage('top-movies')">Top Movies</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="home" class="page active">
+            <div class="hero">
+                <div class="subtitle">Welcome to</div>
+                <h1>The Movie Box</h1>
+                <p>Your ultimate destination for discovering incredible movies from around the world. Whether you're in the mood for action, romance, comedy, or something completely unexpected, we've got the perfect recommendation waiting for you.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Movies Available</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Genres</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Possibilities</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-showcase">
+                <h3 class="showcase-title">🔥 Trending Now</h3>
+                <div class="trending-movies" id="trendingMovies">
+                    <div class="loading">Loading trending movies...</div>
+                </div>
+            </div>
+
+            <div class="feature-cards">
+                <div class="feature-card" onclick="showPage('wheel')">
+                    <h3>🎰 Movie Roulette</h3>
+                    <p>Can't decide what to watch? Let our movie roulette wheel choose for you! Select your favorite genre and spin for a personalized recommendation that's sure to surprise and delight.</p>
+                </div>
+                
+                <div class="feature-card" onclick="showPage('top-movies')">
+                    <h3>🏆 Critics' Choice</h3>
+                    <p>Explore the highest-rated and most critically acclaimed films of all time. These masterpieces have stood the test of time and are guaranteed to provide an unforgettable cinematic experience.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="wheel" class="page">
+            <div class="wheel-container">
+                <h2>🎰 Spin the Movie Wheel</h2>
+                <p>Choose your preferences and spin to discover your next movie!</p>
+
+                <div class="genre-selection">
+                    <h3>Select Genre:</h3>
+                    <select id="genreSelect">
+                        <option value="">Any Genre</option>
+                        <option value="28">Action</option>
+                        <option value="12">Adventure</option>
+                        <option value="16">Animation</option>
+                        <option value="35">Comedy</option>
+                        <option value="80">Crime</option>
+                        <option value="99">Documentary</option>
+                        <option value="18">Drama</option>
+                        <option value="10751">Family</option>
+                        <option value="14">Fantasy</option>
+                        <option value="36">History</option>
+                        <option value="27">Horror</option>
+                        <option value="10402">Music</option>
+                        <option value="9648">Mystery</option>
+                        <option value="10749">Romance</option>
+                        <option value="878">Science Fiction</option>
+                        <option value="10770">TV Movie</option>
+                        <option value="53">Thriller</option>
+                        <option value="10752">War</option>
+                        <option value="37">Western</option>
+                    </select>
+                </div>
+
+                <div class="wheel" id="movieWheel">
+                    <div class="wheel-center">SPIN</div>
+                </div>
+
+                <button class="spin-btn" id="spinBtn" onclick="spinWheel()">
+                    🎲 Spin the Wheel!
+                </button>
+
+                <div id="movieResult" class="movie-result" style="display: none;">
+                    </div>
+            </div>
+        </div>
+
+        <div id="top-movies" class="page">
+            <h2>⭐ Top Rated Movies</h2>
+            <p>Discover the highest-rated movies from around the world</p>
+
+            <div id="topMoviesGrid" class="movies-grid">
+                <div class="loading">Loading amazing movies...</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <span>🎬</span>
+                    <h4>The Movie Box</h4>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" onclick="showPage('home')">Home</a>
+                    <a href="#" onclick="showPage('wheel')">Movie Roulette</a>
+                    <a href="#" onclick="showPage('top-movies')">Top Rated</a>
+                    <a href="#" onclick="showAbout()">About</a>
+                </div>
+            </div>
+
+            <div class="tmdb-attribution">
+                <span>Powered by</span>
+                <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_long_1-8ba2ac31f354005783fab473602c34c3f4fd207150182061e425d366e4f34596.svg" alt="TMDb" class="tmdb-logo">
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Movie Box. Made with ❤️ for movie lovers.</p>
+                <p>🐱‍👤 A Project By Ahmad Raza.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
