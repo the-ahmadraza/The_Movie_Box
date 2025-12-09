@@ -405,16 +405,16 @@ select:focus {
     justify-content: center;
     /* Red, Dark Red, Black, Dark Grey repeating pattern */
     background: conic-gradient(
-        #E50914 0deg 60deg,
-        #141414 60deg 120deg,
-        #B81D24 120deg 180deg,
-        #221F1F 180deg 240deg,
-        #E50914 240deg 300deg,
+        #ffffff 0deg 60deg,
+        #000000 60deg 120deg,
+        #ffffff 120deg 180deg,
+        #000000 180deg 240deg,
+        #ffffff 240deg 300deg,
         #000000 300deg 360deg
     );
     position: relative;
     transition: transform 2s cubic-bezier(0.17, 0.67, 0.12, 0.99);
-    box-shadow: 0 0 20px rgba(229, 9, 20, 0.2);
+    box-shadow: 0 0 20px (255, 255, 255, 0.1);
 }
 
 .wheel-center {
